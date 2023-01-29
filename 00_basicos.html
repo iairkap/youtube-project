@@ -85,23 +85,25 @@
 
     /*
         //Cadenas de Texto aka Strings
-        let nombre = "Jon";
+        let nombre = "Jon"; mas estendarizada usar la doble comilla
         let apellido = 'MirCha';
-        let saludo = new String("Hola Mundo");
+        let saludo = new String("Hola Mundo"); esta nadie la utiliza, es muy formal
         let lorem = "       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, et dolorum. Adipisci sequi, voluptates accusamus earum magnam non pariatur odit consequuntur dicta modi. Quam soluta aliquid nam ea quod dolore.      ";
 
-        console.log(nombre, apellido, saludo);
+        console.log(nombre, apellido, saludo); puedo imprimir varias consolas separando con comas
         console.log(
           nombre.length,
           apellido.length,
           saludo.length,
           nombre.toUpperCase(),
-          apellido.toLowerCase(),
-          lorem.includes("amet"),
+          apellido.toLowerCase(), es una accion que hace que se escriba en minusculas, me 
+          puede servir para por ejemplo si estoy en una app y tengo que escribir mi correo 
+          electronico, por default sea si o si en minisculo
+          lorem.includes("amet"), puedo buscar la palabra amet en el bloque de texto
           lorem.includes("jon"),
           lorem,
-          lorem.trim(),
-          lorem.split(" "),
+          lorem.trim(), quita los espacios de blanco que hay en el texto 
+          lorem.split(" "),genera un arreglo, separando la palabra por arreglo, 
           lorem.split(",")
         );
 
@@ -116,12 +118,15 @@
     /* let nombre = "Jon";
     let apellido = "MirCha";
  */
-    //Concatenación
+    //Concatenación utilizo el simbolo de la suma para unir las frases, puede ser una 
+    // con un string que agrege al mismo let, es cansador
     //let saludo = "Hola mi nombre es " + nombre + " " + apellido + ".";
     //console.log(saludo);
 
-    //Interpolción de variables
-    //Template String
+    //Interpolción de variables, 
+    //Template String 
+    // se utiliza el backtick, o acento invertido, no comilla, y se utiliza el $
+    // para llamar a la variable
     /* let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`;
     console.log(saludo2);
 
@@ -162,14 +167,15 @@
     let d = "5.6";
 
     console.log(a, b);
-    console.log(c.toFixed(1));
-    console.log(c.toFixed(5));
-    console.log(parseInt(c));
+    console.log(c.toFixed(1));sirve para redondear, me dice que solo va a tener 1 valor numerico decimal
+    console.log(c.toFixed(5));me redondearia con 5 valores decimales
+    console.log(parseInt(c));me devuelve solo la parte entera del numero, 
     console.log(parseFloat(c));
-    console.log(typeof c, typeof d);
+    console.log(typeof c, typeof d);nos dice de que tipo naturaleza es la variable ,si es un string o un number
     console.log(a + b);
     console.log(c + parseInt(d));
-    console.log(c + parseFloat(d));
+    console.log(c + parseFloat(d));si un formulario de una app, como edad en la web, seria un string lo que le llega
+    a la consola, el parseint me transforma el string en number
     console.log(c + Number.parseInt(d));
     console.log(c + Number.parseFloat(d)); */
 
@@ -293,7 +299,7 @@
         const c = Array.of("X", "Y", "Z", 9, 8, 7);
         console.log(c);
 
-        const d = Array(100).fill(false);
+        const d = Array(100).fill(false); haria un arreglo de 100 posisiones con la palabra false. 
         console.log(d);
 
         const e = new Array();
@@ -330,7 +336,10 @@
     const c = new Object();
     console.log(c);
  */
-    /* dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las funciones se les llama métodos */
+    /* dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las funciones se les llama métodos 
+    dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las funciones se les llama metodos, dentro 
+    un objeto a las variables se le van a llamar atributos y las funciones es les llama metodos 
+    */
     /*     const jon = {
           nombre: "Jon",
           apellido: "MirCha",
@@ -364,9 +373,9 @@
         jon.saludar();
         jon.decirMiNombre();
 
-        console.log(Object.keys(jon));
-        console.log(Object.values(jon));
-        console.log(jon.hasOwnProperty("nombre"));
+        console.log(Object.keys(jon)); me muestra los datos del objeto como si fueran arreglos 
+        console.log(Object.values(jon)); me muestra todos los values del objto, respetando el objeto mismo
+        console.log(jon.hasOwnProperty("nombre")); responde con true o false, si existe el valor dentro del objeto
         console.log(jon.hasOwnProperty("nacimiento"));
      */
 
@@ -379,7 +388,8 @@
     /* Operadores */
     /* Aritméticos:  + - * / % ()  */
 
-    /* let a = 5 + (5 - 10) * 3;
+    /* 
+    let a = 5 + (5 - 10) * 3;
     let modulo = 5 % 2;
 
     console.log(a);
@@ -442,7 +452,7 @@
 
 
     /* **********     Curso JavaScript: 14. Condicionales - #jonmircha     ********** */
-
+      //una escritura de control permite mantener el flujo del codigo, hay secuenciales una tras la otro, y despues estan las condicionales, y loops
     /* if - else */
 
     /* let edad = 9;
@@ -556,14 +566,14 @@
 
      while (contador < 10) {
        console.log("while " + contador);
-       contador++;
+       contador++; //analixa primero, ejecuta despues 
      }
 
 
      do {
        console.log("do while " + contador);
        contador++;
-     } while (contador < 10); */
+     } while (contador < 10); */ //se ejecuta el codigo si o si una vez, antes que lo analice
 
     /* for (inicialización de variable; condición; decremento o incremento) {
       sentencias que ejecuta el for
